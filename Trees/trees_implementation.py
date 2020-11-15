@@ -1,32 +1,64 @@
-class TreeNode:
-  def __init__(self, data):
-    self.data = data
-    self.children = []
-    self.parent = None # this stores the parent of TreeNode.
-  
-  def add_child(self, child):
-    child.parent = self # child is an instance of TreeNode class and now self will become the parent of this child object
-    self.children.append(child) # add the child element into children list
-  
-  def build_product_tree():
-    root = TreeNode("Electronics")
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.children = []
 
-    laptop = TreeNode("Laptop")
-    laptop.add_child(TreeNode("Asus"))
-    laptop.add_child(TreeNode("Lenovo"))
-    laptop.add_child(TreeNode("MacBook"))
+    def add_child(self, obj):
+        self.children.append(obj)
 
-    cell = TreeNode("Cell Phone")
-    cell.add_child(TreeNode("Redmi"))
-    cell.add_child(TreeNode("Samsung"))
-    cell.add_child(TreeNode("iPhone"))
+def build_product_tree():
+    root = Node("Electronics")
 
-    tv = TreeNode("Television")
-    tv.add_child(TreeNode("LG"))
-    tv.add_child(TreeNode("Sony"))
+    laptop = Node("Laptop")
+    laptop.add_child(Node("Asus"))
+    laptop.add_child(Node("Lenovo"))
+    laptop.add_child(Node("MacBook"))
+
+    cell = Node("Cell Phone")
+    cell.add_child(Node("Redmi"))
+    cell.add_child(Node("Samsung"))
+    cell.add_child(Node("iPhone"))
+
+    tv = Node("Television")
+    tv.add_child(Node("LG"))
+    tv.add_child(Node("Sony"))
 
     root.add_child(laptop)
     root.add_child(cell)
     root.add_child(tv)
 
-    return root
+    for d in root.children:
+      print("Children of the root node:", d.data)
+    print("\n")
+    for l in laptop.children:
+      print("Children of Laptop node:", l.data)
+    print("\n")
+    for c in cell.children:
+      print("Children of Cell Phone node:", c.data)
+    print("\n")
+    for t in tv.children:
+      print("Children of Television node:", t.data)
+
+
+build_product_tree()
+
+'''
+OUTPUT: 
+Children of the root node: Laptop
+Children of the root node: Cell Phone
+Children of the root node: Television
+
+
+Children of Laptop node: Asus
+Children of Laptop node: Lenovo
+Children of Laptop node: MacBook
+
+
+Children of Cell Phone node: Redmi
+Children of Cell Phone node: Samsung
+Children of Cell Phone node: iPhone
+
+
+Children of Television node: LG
+Children of Television node: Sony
+'''
