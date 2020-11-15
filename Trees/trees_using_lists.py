@@ -51,3 +51,10 @@ print(right)
 
 setRootVal(left, 9)  # sets the root value of the left node to 9
 print(r)
+
+'''
+OUTPUT:
+Left Child Node: [5, [4, [], []], []]
+Right Child Node: [7, [], [6, [], []]]
+[3, [9, [4, [], []], []], [7, [], [6, [], []]]]
+'''
