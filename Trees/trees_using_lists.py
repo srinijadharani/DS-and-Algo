@@ -44,10 +44,10 @@ insertRight(r, 6)
 insertRight(r, 7)
 
 left = getLeftChild(r)  # prints the left node of the root node
-print(left)
+print("Left Child Node:",left)
 
 right = getRightChild(r)  # prints the right node of the root node
-print(right)
+print("Right Child Node:",right)
 
 setRootVal(left, 9)  # sets the root value of the left node to 9
 print(r)
