@@ -134,10 +134,21 @@ if __name__ == '__main__':
     nodes = [17, 4, 1, 20, 9, 23, 18, 34]
     nodes_tree = display_tree(nodes)
     print("In-order Traversal:", nodes_tree.inorder_print())
+    print("Pre-order Traversal:", nodes_tree.preorder_print())
+    print("Post-order Traversal:", nodes_tree.postorder_print())
     # the search function works even for strings, not just integers
     print("Does the search element exist in the given tree?", nodes_tree.search(13)) 
     print("Sum =", sum_of_elements(nodes))
     print("Minimum =", find_min(nodes))
     print("Maximum =", find_max(nodes))
 
-
+'''
+OUTPUT:
+In-order Traversal: [1, 4, 9, 17, 18, 20, 23, 34]
+Pre-order Traversal: [17, 4, 1, 9, 20, 18, 23, 34]
+Post-order Traversal: [1, 9, 4, 18, 34, 23, 20, 17]
+Does the search element exist in the given tree? False
+Sum = 126
+Minimum = 1
+Maximum = 34
+'''
