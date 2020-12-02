@@ -142,13 +142,4 @@ if __name__ == '__main__':
     print("Minimum =", find_min(nodes))
     print("Maximum =", find_max(nodes))
 
-'''
-OUTPUT:
-In-order Traversal: [1, 4, 9, 17, 18, 20, 23, 34]
-Pre-order Traversal: [17, 4, 1, 9, 20, 18, 23, 34]
-Post-order Traversal: [1, 9, 4, 18, 34, 23, 20, 17]
-Does the search element exist in the given tree? False
-Sum = 126
-Minimum = 1
-Maximum = 34
-'''
+
